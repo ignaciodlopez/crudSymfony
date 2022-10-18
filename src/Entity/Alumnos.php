@@ -42,7 +42,6 @@ class Alumnos
      */
     private $edad;
 
-    //Getter y Setter
     public function getId(): ?int
     {
         return $this->id;

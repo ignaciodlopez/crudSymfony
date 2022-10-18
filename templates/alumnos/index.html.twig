@@ -3,7 +3,7 @@
 {% block title %}Alumnos index{% endblock %}
 
 {% block body %}
-    <h1>Alumnos index</h1>
+    <h1>Alumnos CRUD</h1>
 
     <table class="table">
         <thead>
@@ -35,5 +35,6 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_alumnos_new') }}">Create new</a>
+    <a href="{{ path('app_alumnos_new') }}"><button type="button" class="btn btn-primary">Create new</button></a>
+    {# <button type="button" class="btn btn-primary"><b href="{{ path('app_alumnos_new') }}">Create new</b></button> #}
 {% endblock %}
