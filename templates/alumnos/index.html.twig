@@ -3,6 +3,7 @@
 {% block title %}Alumnos CRUD{% endblock %}
 
 {% block body %}
+<div class = "container p-4">
     <h1>Alumnos CRUD</h1>
 
     <table class="table">
@@ -16,7 +17,9 @@
             </tr>
         </thead>
         <tbody>
+        
         {% for alumno in alumnos %}
+           
             <tr>
                 <td>{{ alumno.id }}</td>
                 <td>{{ alumno.nombre }}</td>
@@ -33,9 +36,10 @@
                 <td colspan="5">No se encontraron datos :/</td>
             </tr>
         {% endfor %}
+    
         </tbody>
     </table>
 
     <a href="{{ path('app_alumnos_new') }}"><button type="button" class="btn btn-primary">Ingresar un Alumno</button></a>
-    
+</div>
 {% endblock %}
