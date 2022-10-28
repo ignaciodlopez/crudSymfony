@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -41,6 +43,17 @@ class Alumnos
      * @ORM\Column(name="edad", type="integer", nullable=false)
      */
     private $edad;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Materias::class, inversedBy="alumno")
+     */
+    private $materia;
+
+    public function __construct()
+    {
+        $this->materia = new ArrayCollection();
+    }
+
 
     public function getId(): ?int
     {
@@ -83,5 +96,28 @@ class Alumnos
         return $this;
     }
 
+    /**
+     * @return Collection<int, Materias>
+     */
+    public function getMateria(): Collection
+    {
+        return $this->materia;
+    }
+
+    public function addMaterium(Materias $materium): self
+    {
+        if (!$this->materia->contains($materium)) {
+            $this->materia[] = $materium;
+        }
+
+        return $this;
+    }
+
+    public function removeMaterium(Materias $materium): self
+    {
+        $this->materia->removeElement($materium);
+
+        return $this;
+    }
 
 }

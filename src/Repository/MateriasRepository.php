@@ -2,26 +2,26 @@
 
 namespace App\Repository;
 
-use App\Entity\Materia;
+use App\Entity\Materias;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Materia>
+ * @extends ServiceEntityRepository<Materias>
  *
- * @method Materia|null find($id, $lockMode = null, $lockVersion = null)
- * @method Materia|null findOneBy(array $criteria, array $orderBy = null)
- * @method Materia[]    findAll()
- * @method Materia[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Materias|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Materias|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Materias[]    findAll()
+ * @method Materias[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class MateriaRepository extends ServiceEntityRepository
+class MateriasRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Materia::class);
+        parent::__construct($registry, Materias::class);
     }
 
-    public function add(Materia $entity, bool $flush = false): void
+    public function add(Materias $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
 
@@ -30,7 +30,7 @@ class MateriaRepository extends ServiceEntityRepository
         }
     }
 
-    public function remove(Materia $entity, bool $flush = false): void
+    public function remove(Materias $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);
 
@@ -40,7 +40,7 @@ class MateriaRepository extends ServiceEntityRepository
     }
 
 //    /**
-//     * @return Materia[] Returns an array of Materia objects
+//     * @return Materias[] Returns an array of Materias objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -54,7 +54,7 @@ class MateriaRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?Materia
+//    public function findOneBySomeField($value): ?Materias
 //    {
 //        return $this->createQueryBuilder('m')
 //            ->andWhere('m.exampleField = :val')

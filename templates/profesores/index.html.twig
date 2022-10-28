@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profesores index{% endblock %}
+
+{% block body %}
+<div class = "container p-4">
+    <h1>Profesores CRUD</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Materia</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profesor in profesores %}
+            <tr>
+                <td>{{ profesor.id }}</td>
+                <td>{{ profesor.nombre }}</td>
+                <td>{{ profesor.apellido }}</td>
+                <td>
+                    <a href="{{ path('app_profesores_show', {'id': profesor.id}) }}">show</a>
+                    <a href="{{ path('app_profesores_edit', {'id': profesor.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_profesores_new') }}">Create new</a>
+</div>
+{% endblock %}
