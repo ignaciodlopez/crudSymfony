@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Profesores index{% endblock %}
+{% block title %}Profesores CRUD{% endblock %}
 
 {% block body %}
 <div class = "container p-4">
@@ -22,19 +22,20 @@
                 <td>{{ profesor.id }}</td>
                 <td>{{ profesor.nombre }}</td>
                 <td>{{ profesor.apellido }}</td>
+                <td>{{ profesor.Materia }}</td>
                 <td>
-                    <a href="{{ path('app_profesores_show', {'id': profesor.id}) }}">show</a>
-                    <a href="{{ path('app_profesores_edit', {'id': profesor.id}) }}">edit</a>
+                    <a href="{{ path('app_profesores_show', {'id': profesor.id}) }}">Mostrar</a>
+                    <a href="{{ path('app_profesores_edit', {'id': profesor.id}) }}">Editar</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="4">no records found</td>
+                <td colspan="4">No se encontraron datos :/</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_profesores_new') }}">Create new</a>
+    <a href="{{ path('app_profesores_new') }}">Ingresar un Profesor</a>
 </div>
 {% endblock %}

@@ -49,6 +49,7 @@ class Alumnos
      */
     private $materia;
 
+
     public function __construct()
     {
         $this->materia = new ArrayCollection();

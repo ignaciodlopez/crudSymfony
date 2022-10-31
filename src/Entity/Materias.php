@@ -25,11 +25,6 @@ class Materias
     private $nombre;
 
     /**
-     * @ORM\OneToOne(targetEntity=Profesores::class, cascade={"persist", "remove"})
-     */
-    private $Profesor;
-
-    /**
      * @ORM\ManyToMany(targetEntity=Alumnos::class, mappedBy="materia")
      */
     private $alumnos;
@@ -58,18 +53,6 @@ class Materias
     public function setNombre(string $nombre): self
     {
         $this->nombre = $nombre;
-
-        return $this;
-    }
-
-    public function getProfesor(): ?Profesores
-    {
-        return $this->Profesor;
-    }
-
-    public function setProfesor(?Profesores $Profesor): self
-    {
-        $this->Profesor = $Profesor;
 
         return $this;
     }

@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Materias;
-use App\Form\MateriasType;
+use App\Form\Materias1Type;
 use App\Repository\MateriasRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -31,7 +31,7 @@ class MateriasController extends AbstractController
     public function new(Request $request, MateriasRepository $materiasRepository): Response
     {
         $materia = new Materias();
-        $form = $this->createForm(MateriasType::class, $materia);
+        $form = $this->createForm(Materias1Type::class, $materia);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -61,7 +61,7 @@ class MateriasController extends AbstractController
      */
     public function edit(Request $request, Materias $materia, MateriasRepository $materiasRepository): Response
     {
-        $form = $this->createForm(MateriasType::class, $materia);
+        $form = $this->createForm(Materias1Type::class, $materia);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

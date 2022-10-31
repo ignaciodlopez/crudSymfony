@@ -27,6 +27,11 @@ class Profesores
      */
     private $apellido;
 
+    /**
+     * @ORM\OneToOne(targetEntity=Materias::class, cascade={"persist", "remove"})
+     */
+    private $materia;
+
 
     public function getId(): ?int
     {
@@ -53,6 +58,18 @@ class Profesores
     public function setApellido(string $apellido): self
     {
         $this->apellido = $apellido;
+
+        return $this;
+    }
+
+    public function getMateria(): ?Materias
+    {
+        return $this->materia;
+    }
+
+    public function setMateria(?Materias $materia): self
+    {
+        $this->materia = $materia;
 
         return $this;
     }
