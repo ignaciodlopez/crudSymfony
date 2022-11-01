@@ -22,7 +22,7 @@
                 <td>{{ profesor.id }}</td>
                 <td>{{ profesor.nombre }}</td>
                 <td>{{ profesor.apellido }}</td>
-                <td>{{ profesor.Materia }}</td>
+                {# <td>{{ profesor.materia_id }}</td> #}
                 <td>
                     <a href="{{ path('app_profesores_show', {'id': profesor.id}) }}">Mostrar</a>
                     <a href="{{ path('app_profesores_edit', {'id': profesor.id}) }}">Editar</a>

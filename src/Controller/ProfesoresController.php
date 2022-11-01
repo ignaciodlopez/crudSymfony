@@ -71,7 +71,7 @@ class ProfesoresController extends AbstractController
         }
 
         return $this->renderForm('profesores/edit.html.twig', [
-            'profesore' => $profesore,
+            'profesores' => $profesores,
             'form' => $form,
         ]);
     }
@@ -81,8 +81,8 @@ class ProfesoresController extends AbstractController
      */
     public function delete(Request $request, Profesores $profesore, ProfesoresRepository $profesoresRepository): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$profesore->getId(), $request->request->get('_token'))) {
-            $profesoresRepository->remove($profesore, true);
+        if ($this->isCsrfTokenValid('delete'.$profesores->getId(), $request->request->get('_token'))) {
+            $profesoresRepository->remove($profesores, true);
         }
 
         return $this->redirectToRoute('app_profesores_index', [], Response::HTTP_SEE_OTHER);

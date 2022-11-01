@@ -7,15 +7,12 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class MateriasType extends AbstractType
+class Materias1Type extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
             ->add('nombre')
-            ->add('Profesor')
-            ->add('alumnos')
-            ->add('alumno')
         ;
     }
 
