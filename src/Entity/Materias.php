@@ -90,5 +90,6 @@ class Materias
     public function getAlumno(): Collection
     {
         return $this->alumno;
-    }
+    } 
+    
 }
