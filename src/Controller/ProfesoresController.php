@@ -59,13 +59,13 @@ class ProfesoresController extends AbstractController
     /**
      * @Route("/{id}/edit", name="app_profesores_edit", methods={"GET", "POST"})
      */
-    public function edit(Request $request, Profesores $profesore, ProfesoresRepository $profesoresRepository): Response
+    public function edit(Request $request, Profesores $profesores, ProfesoresRepository $profesoresRepository): Response
     {
-        $form = $this->createForm(ProfesoresType::class, $profesore);
+        $form = $this->createForm(ProfesoresType::class, $profesores);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $profesoresRepository->add($profesore, true);
+            $profesoresRepository->add($profesores, true);
 
             return $this->redirectToRoute('app_profesores_index', [], Response::HTTP_SEE_OTHER);
         }
@@ -79,7 +79,7 @@ class ProfesoresController extends AbstractController
     /**
      * @Route("/{id}", name="app_profesores_delete", methods={"POST"})
      */
-    public function delete(Request $request, Profesores $profesore, ProfesoresRepository $profesoresRepository): Response
+    public function delete(Request $request, Profesores $profesores, ProfesoresRepository $profesoresRepository): Response
     {
         if ($this->isCsrfTokenValid('delete'.$profesores->getId(), $request->request->get('_token'))) {
             $profesoresRepository->remove($profesores, true);
