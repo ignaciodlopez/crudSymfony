@@ -59,19 +59,19 @@ class ProfesoresController extends AbstractController
     /**
      * @Route("/{id}/edit", name="app_profesores_edit", methods={"GET", "POST"})
      */
-    public function edit(Request $request, Profesores $profesores, ProfesoresRepository $profesoresRepository): Response
+    public function edit(Request $request, Profesores $profesor, ProfesoresRepository $profesorRepository): Response
     {
-        $form = $this->createForm(ProfesoresType::class, $profesores);
+        $form = $this->createForm(ProfesoresType::class, $profesor);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $profesoresRepository->add($profesores, true);
+            $profesoresRepository->add($profesor, true);
 
             return $this->redirectToRoute('app_profesores_index', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('profesores/edit.html.twig', [
-            'profesores' => $profesores,
+            'profesor' => $profesor,
             'form' => $form,
         ]);
     }

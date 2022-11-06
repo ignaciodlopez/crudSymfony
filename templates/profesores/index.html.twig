@@ -24,8 +24,8 @@
                 <td>{{ profesor.apellido }}</td>
                 <td>{{ profesor.materia.nombre }}</td>
                 <td>
-                    <a href="{{ path('app_profesores_show', {'id': profesor.id}) }}">Mostrar</a>
-                    <a href="{{ path('app_profesores_edit', {'id': profesor.id}) }}">Editar</a>
+                    <a href="{{ path('app_profesores_show', {'id': profesor.id}) }}"><button type="button" class="btn btn-primary">Mostrar</button></a>
+                    <a href="{{ path('app_profesores_edit', {'id': profesor.id}) }}"><button style="background-color:purple" type="button" class="btn btn-primary">Editar</button></a>
                 </td>
             </tr>
         {% else %}
@@ -36,6 +36,6 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_profesores_new') }}">Ingresar un Profesor</a>
+    <a href="{{ path('app_profesores_new') }}"><button type="button" class="btn btn-primary">Ingresar un Profesor</button></a>
 </div>
 {% endblock %}
