@@ -30,18 +30,18 @@ class ProfesoresController extends AbstractController
      */
     public function new(Request $request, ProfesoresRepository $profesoresRepository): Response
     {
-        $profesore = new Profesores();
-        $form = $this->createForm(ProfesoresType::class, $profesore);
+        $profesor = new Profesores();
+        $form = $this->createForm(ProfesoresType::class, $profesor);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $profesoresRepository->add($profesore, true);
+            $profesoresRepository->add($profesor, true);
 
             return $this->redirectToRoute('app_profesores_index', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('profesores/new.html.twig', [
-            'profesore' => $profesore,
+            'profesore' => $profesor,
             'form' => $form,
         ]);
     }
@@ -49,10 +49,10 @@ class ProfesoresController extends AbstractController
     /**
      * @Route("/{id}", name="app_profesores_show", methods={"GET"})
      */
-    public function show(Profesores $profesore): Response
+    public function show(Profesores $profesor): Response
     {
         return $this->render('profesores/show.html.twig', [
-            'profesore' => $profesore,
+            'profesor' => $profesor,
         ]);
     }
 

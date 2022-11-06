@@ -9,26 +9,26 @@
         <tbody>
             <tr>
                 <th>Id</th>
-                <td>{{ profesore.id }}</td>
+                <td>{{ profesor.id }}</td>
             </tr>
             <tr>
                 <th>Nombre</th>
-                <td>{{ profesore.nombre }}</td>
+                <td>{{ profesor.nombre }}</td>
             </tr>
             <tr>
                 <th>Apellido</th>
-                <td>{{ profesore.apellido }}</td>
+                <td>{{ profesor.apellido }}</td>
             </tr>
             <tr>
                 <th>Materia</th>
-                <td>{{ profesore.Materia }}</td>
+                <td>{{ profesor.materia.nombre }}</td>
             </tr>
         </tbody>
     </table>
 
     <a href="{{ path('app_profesores_index') }}">Volver a la Lista</a>
 
-    <a href="{{ path('app_profesores_edit', {'id': profesore.id}) }}">Editar</a>
+    <a href="{{ path('app_profesores_edit', {'id': profesor.id}) }}">Editar</a>
 
     {{ include('profesores/_delete_form.html.twig') }}
 {% endblock %}
