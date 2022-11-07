@@ -59,7 +59,7 @@ class ProfesoresController extends AbstractController
     /**
      * @Route("/{id}/edit", name="app_profesores_edit", methods={"GET", "POST"})
      */
-    public function edit(Request $request, Profesores $profesor, ProfesoresRepository $profesorRepository): Response
+    public function edit(Request $request, Profesores $profesor, ProfesoresRepository $profesoresRepository): Response
     {
         $form = $this->createForm(ProfesoresType::class, $profesor);
         $form->handleRequest($request);
