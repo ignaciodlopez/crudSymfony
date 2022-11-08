@@ -6,7 +6,7 @@
 <div class = "container p-4">
     <h1>Ingresar un Profesor</h1>
 
-    {{ include('profesores/_form.html.twig') }}
+    <a {{ include('profesores/_form.html.twig') }} </a>
 
     <a href="{{ path('app_profesores_index') }}"<button type="button" class="btn btn-primary">Volver a la Lista</button></a>
 </div>

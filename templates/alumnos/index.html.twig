@@ -27,7 +27,7 @@
                 <td>
                     <a href="{{ path('app_alumnos_show', {'id': alumno.id}) }}"><button type="button" class="btn btn-primary">Mostrar</button></a>
                     <a href="{{ path('app_alumnos_edit', {'id': alumno.id}) }}"<button style="background-color:purple" type="button" class="btn btn-primary">Editar</button></a>
-                    <a href={{ include('alumnos/_delete_form.html.twig') }}</a>  {#Funciona sin la etiqueta href pero queda feo#}
+                    {# <a href={{ include('alumnos/_delete_form.html.twig') }}</a>  Botón de eliminar, Funciona sin la etiqueta href pero queda feo #}
                 </td>
             </tr>
         {% else %}
