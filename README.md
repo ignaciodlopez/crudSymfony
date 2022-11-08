@@ -18,8 +18,6 @@ Aplicación web para la adminstración de Alumnos, profesores y Materias.
 
 ## Documentación del proceso de desarrollo
 
-# Práctica crudSymfony
-
 **Creación de un CRUD Web App:**
 
 1. **Crear el Proyecto:** `composer create-project symfony/website-skeleton crudSymfony` → Nos ubicamos en la carpeta de Xampp y creamos un proyecto en Symfony utilizando Composer en el CMD de Windows, le asignamos el nombre “crudSymfony”; aquí se crearon todas las librerías necesarias para Symfony.
