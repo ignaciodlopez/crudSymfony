@@ -1,5 +1,5 @@
 # Práctica Fullstack CRUD (Create, Read Update y Delete).
-Aplicación web para la adminstración de Alumnos, profesores y Materias.
+Aplicación web para la adminstración de Alumnos, Profesores y Materias.
 
 ## Tecnologías utilizadas
 
