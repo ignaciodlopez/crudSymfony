@@ -27,16 +27,10 @@ class Materias
     /**
      * @ORM\ManyToMany(targetEntity=Alumnos::class, mappedBy="materia")
      */
-    private $alumnos;
-
-    /**
-     * @ORM\ManyToMany(targetEntity=Alumnos::class, mappedBy="materia")
-     */
     private $alumno;
 
     public function __construct()
     {
-        $this->alumnos = new ArrayCollection();
         $this->alumno = new ArrayCollection();
     }
 
