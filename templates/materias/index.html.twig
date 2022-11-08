@@ -20,8 +20,8 @@
                 <td>{{ materia.id }}</td>
                 <td>{{ materia.nombre }}</td>
                 <td>
-                    <a href="{{ path('app_materias_show', {'id': materia.id}) }}">Mostrar</a>
-                    <a href="{{ path('app_materias_edit', {'id': materia.id}) }}">Editar</a>
+                    <a href="{{ path('app_materias_show', {'id': materia.id}) }}"><button type="button" class="btn btn-primary">Mostrar</button></a>
+                    <a href="{{ path('app_materias_edit', {'id': materia.id}) }}"><button style="background-color:purple" type="button" class="btn btn-primary">Editar</button></a>
                 </td>
             </tr>
         {% else %}
@@ -32,6 +32,6 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_materias_new') }}">Ingresar una Materia</a>
+    <a href="{{ path('app_materias_new') }}"><button type="button" class="btn btn-primary">Ingresar una Materia</button></a>
 </div>
 {% endblock %}
