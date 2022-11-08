@@ -12,12 +12,15 @@ Aplicación web para la adminstración de Alumnos, profesores y Materias.
 
 
 ## Capturas del Frontend
+![image](https://user-images.githubusercontent.com/75576067/200662196-6586ed71-efed-4b7e-863a-99e2381edcce.png)
+![image](https://user-images.githubusercontent.com/75576067/200662256-4b486926-9798-4e70-8da7-ad55279b219a.png)
+![image](https://user-images.githubusercontent.com/75576067/200662313-b3f54858-45c1-4735-bc4e-fbba0d327fae.png)
+
 
 ## Diagrama entidad-relacion (DER)
 ![DER](https://user-images.githubusercontent.com/75576067/200661734-ee122428-1dc3-4a0c-84f8-4938bfe5ad2a.PNG)
 
 ## Documentación del proceso de desarrollo
-
 **Creación de un CRUD Web App:**
 
 1. **Crear el Proyecto:** `composer create-project symfony/website-skeleton crudSymfony` → Nos ubicamos en la carpeta de Xampp y creamos un proyecto en Symfony utilizando Composer en el CMD de Windows, le asignamos el nombre “crudSymfony”; aquí se crearon todas las librerías necesarias para Symfony.
