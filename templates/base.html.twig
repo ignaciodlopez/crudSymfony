@@ -19,24 +19,27 @@
 {# Barra de navegación #}
 <nav class="navbar navbar-expand-lg bg-light">
 <div class="container-fluid">
-    <a class="navbar-brand" href="/home">Symfony CRUD</a>
+    <a class="navbar-brand" href="/">Symfony CRUD</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
         <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="/home">Home</a>
+        <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
         <a class="nav-link" href="{{ path('app_alumnos_index') }}">Alumnos</a>
         </li>
-        <li class="nav-item">
-        <a class="nav-link" href="{{ path('app_profesores_index') }}">Profesores</a>
-        </li>
             <li class="nav-item">
-            <a class="nav-link" href="{{ path('app_materias_index') }}">Materias</a>
+            <a class="nav-link" href="{{ path('app_profesores_index') }}">Profesores</a>
             </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{{ path('app_materias_index') }}">Materias</a>
+                </li>
+                        <li class="nav-item">
+                        <a href="{{ path('app_logout') }}"><button type="button" class="btn btn-outline-danger">Logout</button></a>
+                        </li>
             </ul>
             </div>
         </div>
@@ -49,7 +52,7 @@
 
     <body>
         {% block body %}
-            {{form(registration_form)}}
+            {# {{form(registration_form)}} #}
         {% endblock %}
     </body>
 </html>
