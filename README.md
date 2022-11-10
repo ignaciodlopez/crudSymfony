@@ -10,6 +10,16 @@ Aplicación web para la adminstración de Alumnos, Profesores y Materias.
 - **Base de Datos:** MySQL (relacional)
 - **Frontend:** HTML5, Twig, Bootstrap
 
+## Funcionalidades
+
+
+- CRUD Alumnos
+- CRUD Profesores
+- CRUD Materias
+- Registro de usuarios
+- Login de usuarios
+- Logout de usuarios
+
 
 ## Capturas del Frontend
 ![image](https://user-images.githubusercontent.com/75576067/200662196-6586ed71-efed-4b7e-863a-99e2381edcce.png)
