@@ -28,7 +28,7 @@ Aplicación web para la adminstración de Alumnos, Profesores y Materias.
 
 
 ## Diagrama entidad-relacion (DER)
-![DER](https://user-images.githubusercontent.com/75576067/200661734-ee122428-1dc3-4a0c-84f8-4938bfe5ad2a.PNG)
+![image](https://user-images.githubusercontent.com/75576067/201221763-cc4e28aa-5ea5-4c67-bf0b-10c02837b53f.png)
 
 ## Documentación del proceso de desarrollo
 **Creación de un CRUD Web App:**
