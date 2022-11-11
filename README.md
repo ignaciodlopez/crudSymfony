@@ -22,13 +22,20 @@ Aplicación web para la adminstración de Alumnos, Profesores y Materias.
 
 
 ## Capturas del Frontend
-![image](https://user-images.githubusercontent.com/75576067/200662196-6586ed71-efed-4b7e-863a-99e2381edcce.png)
-![image](https://user-images.githubusercontent.com/75576067/200662256-4b486926-9798-4e70-8da7-ad55279b219a.png)
-![image](https://user-images.githubusercontent.com/75576067/200662313-b3f54858-45c1-4735-bc4e-fbba0d327fae.png)
-
+Registro de Usuarios
+![image](https://user-images.githubusercontent.com/75576067/201244580-f54be475-e2ba-4292-91fb-f789adfabf7b.png)
+Login de Usuarios
+![image](https://user-images.githubusercontent.com/75576067/201244624-1c419e84-b074-4ed1-a18e-76752fec512a.png)
+CRUD Alumnos
+![image](https://user-images.githubusercontent.com/75576067/201244113-68d358a1-ad27-4fec-9721-7a7d9cdffa99.png)
+CRUD Profesores
+![image](https://user-images.githubusercontent.com/75576067/201244201-73ba5386-3ffa-4a47-8bf5-af890d14f438.png)
+CRUD Materias
+![image](https://user-images.githubusercontent.com/75576067/201244247-601cbdac-c54b-4e6b-9bb8-50a57d87e554.png)
 
 ## Diagrama entidad-relacion (DER)
 ![image](https://user-images.githubusercontent.com/75576067/201221763-cc4e28aa-5ea5-4c67-bf0b-10c02837b53f.png)
+
 
 ## Documentación del proceso de desarrollo
 **Creación de un CRUD Web App:**
