@@ -33,7 +33,7 @@ CRUD Profesores
 CRUD Materias
 ![image](https://user-images.githubusercontent.com/75576067/201244247-601cbdac-c54b-4e6b-9bb8-50a57d87e554.png)
 
-## Diagrama entidad-relacion (DER)
+## Diagrama entidad-relacion (DER), de la Base de Datos.
 ![image](https://user-images.githubusercontent.com/75576067/201221763-cc4e28aa-5ea5-4c67-bf0b-10c02837b53f.png)
 
 
